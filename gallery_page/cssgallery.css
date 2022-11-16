@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@100;400&display=swap');
+body{
+    background-color: #0c0c0e;
+}
+.swapper{
+    background-color: #0c0c0e;
+  min-height: 81vh;
+}
+.header__text{
+  letter-spacing: 1px;
+  font-family: helvetica;
+  font-style: normal;
+  font-size: 24px;
+  color: brown;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swapper__container{
+    z-index: 10000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.left__arrow{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(/gallery_page/arrows/left.png);
+}
+.left__arrow:hover, .right__arrow:hover{
+  filter: blur(3px);
+  transition: 0.3s;
+}
+.right__arrow{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(/gallery_page/arrows/right.png);
+}
+.swapper__content{
+    width: 55%;
+    height: 30%;
+    border: 2px solid #000000bd;
+    border-radius: 10px;
+}
+.raper__image{
+    background-image: url(/img/104.jpg);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+}
+.two__columns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.swapper__header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.rapper_nick{
+    padding-bottom: 10px;
+}
+.font{
+    letter-spacing: 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.audio__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rapper__biography{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 500px){
+    .font{
+        font-size: 10px;
+    }
+    .raper__image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        background-size: 110%;
+        background-repeat: no-repeat;
+        border: 1px solid black;
+    }
+}

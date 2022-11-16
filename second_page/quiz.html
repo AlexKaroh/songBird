@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/second_page/style_quiz.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/img/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+  <div class="preloader" id="preloader">
+    <div class="loadingio-spinner-double-ring-9fa3q7he3f"><div class="ldio-y5epx1c1hmn">
+      <div></div>
+      <div></div>
+      <div><div></div></div>
+      <div><div></div></div>
+      </div></div>
+      <span class="font" id="Loading">Loading...</span>
+  </div>
+<div class="wrapper">
+  <header class="header">
+    <div class="header__wapper">
+      <div class="logo_container">
+        <a href="#">
+          <img src="/img/logo1.png" class="img_logo" alt="logo">
+        </a>
+      </div>
+      <nav class="navigation_menu">
+        <ul class="ul_menu">
+          <li class="menu-item">
+            <a href="/index.html" class="ul_font menu-link underline-right">Start Page</a>
+          </li>
+          <li class="menu-item">
+            <a href="#QuizGame" class="ul_font menu-link">Quiz Game</a>
+          </li>
+          <li class="menu-item">
+            <a href="/gallery_page/gallery.html" class="ul_font menu-link">Gallery</a>
+          </li>
+       </ul>
+      </nav>
+    </div>
+  </header>
+<!-- НАЧАЛО -->
+    <div id="quiz-over-modal" class="quiz-over-modal">
+        <div class="content">
+            <h1 class="result_header">Хороший результат !</h1>
+            <p class="header__context">Ты получил
+              <span id="number-of-all-questions-2"></span>
+               из 30 возможных баллов
+            </p>
+            <button id="btn-try-again">Пройти еще раз</button>
+        </div>
+    </div>
+    <div class="quiz-container">
+        <div class="question-number">
+            <h3 class="qust_hud">Вопрос
+                <span id="number-of-question"></span>
+                из
+                <span id="number-of-all-questions"></span>
+            </h3>
+            <div class="control_panel">
+              <div class="panel1">
+                <span>Easy Level</span>
+              </div>
+              <span class="spacer">|</span>
+              <div class="panel2">
+                <span>Medium Level</span>
+              </div>
+              <span class="spacer">|</span>
+              <div class="panel3">
+                <span>High Level</span>
+              </div>
+              <span class="spacer">|</span>
+              <div class="panel4">
+                <span>Master Level</span>
+              </div>
+              <span class="spacer">|</span>
+              <div class="panel5">
+                <span>Boss Level</span>
+              </div>
+              <span class="spacer">|</span>
+              <div class="panel6">
+                <span>Hell Level</span>
+              </div>
+            </div>
+        </div>
+
+        <div class="question_hud_container">        
+          <div id="hidden_card" class="hidden_card hidden_avatar"></div>
+          <div id="question"></div>
+
+          <div class="two_colums">
+            <div class="two_raws">
+              <div class="hidden_name" id="hidden_name">*****</div>
+              <div class="score" id="scoreDiv">Score: 0</div>
+
+            </div>
+            <audio id="audio__play">
+              <source controls id="audio" src="" type="audio/mpeg">
+            </audio>
+            <nav class="nav">
+              <div class="buttons">
+                <div class="play__container">
+                  <button class="play__button"></button>
+                  <input type="range" id="progress" class="input_range" value="0" min="0" max="100" step="1"></input>
+                  <span class="current__time font">0:00</span>
+                  <span class="font">/</span>
+                  <spnan class="current__duration font">0:00</spnan>
+                </div>
+                <div class="volume__container">
+                  <button class="mute__button"></button>
+                  <input type="range" id="volumne" class="volume"></input>
+                </div>
+              </div>
+            </nav>
+          </div>
+          </nav>
+        </div>
+
+        <div class="answers_hud_container">
+          <div class="options">
+            <div data-id="0" class="option option1">
+            </div>
+            <div data-id="1" class="option option2">
+
+            </div>
+            <div data-id="2" class="option option3">
+
+            </div>
+            <div data-id="3" class="option option4">
+
+            </div>
+            <div data-id="4" class="option option5">
+
+            </div>
+            <div data-id="5" class="option option6">
+
+            </div>
+
+            <div id="answers-tracker"></div> 
+          </div>
+          <div class="about__container">
+            <div class="about_rapper">
+              <div class="rapper__img_contaier">
+                <div class="started__message" id="started__message">Послушайте плеер.
+                  Выберите вариант из списка</div>
+                <div class="rapper__photo" id="rapper__photo"></div>
+                <div class="container_two_columns">
+                  <div class="rapper_name" id="rapperNick">Boulevard Depo</div>
+                  <div class="rapper_name" id="rapperName">Артем Кацев</div>
+                </div>
+              </div>
+              <div class="hud__description">
+                <div id="rapperSong" class="">
+                  <audio id="audioQiz">
+                    <source controls id="" src="" type="audio/mpeg">
+                  </audio>
+                  <nav class="nav__player1" id="nav_player1">
+                    <div class="default__bar1">
+                      <div class="progres__bar1"></div>
+                    </div>
+                    <div class="buttons1">
+                      <div class="two__rows">
+                        <button class="play__button1"></button>
+                        <input type="range" id="progress1" value="0" class="progress1"></input>
+                        <span class="current__time1 font">0:00</span>
+                        <span class="current__duration1 font">0:00</span>
+                     </div >
+                     <div class="two__rows">
+                        <button class="mute__button1"></button>
+                        <input type="range" id="volumne1" class="volume"></input>
+                     </div>
+                    </div>
+                </div>
+                <div class="rapper__bio" id="repperBio">
+                  Российский хип-хоп исполнитель, автор песен, бывший участник и создатель крупного творческого объединения YungRussia. За свою музыкальную карьеру успел выпустить 5 студийных альбомов, 4 микстейпа, 4 мини-альбома и 7 синглов.
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="button__container">
+            <button id="btn-next" class="btn-next">Next</button>
+        </div>
+
+    </div>
+
+  <footer class="footer">
+    <div class="footer_container">
+      <a href="https://github.com/AlexKaroh" class=""><img src="/img/git.png" class="git_logo" alt="githubLogo"></a>
+      <span class="footer__spaN">November 2022</span>
+      <a href="https://rs.school/js/" class=""><img src="/img/rssco.png" class="rs_logo" alt="schoolLogo"></a>
+    </div>
+  </footer>
+
+</div>
+<script src="/second_page/script_quiz.js"></script>
+<script src="/second_page/script1.js"></script>
+</body>
+</html>
